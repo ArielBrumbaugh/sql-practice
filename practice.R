@@ -13,9 +13,11 @@ con<- dbConnect(driver, dbname="portal_mammals.sqlite")
 results<- dbGetQuery(con, "SELECT species, wgt, year FROM surveys")
 
 
-#If we are done working on the database, we can disconnect
+# If we are done working on the database, we can disconnect
 dbDisconnect(con)
 
-#We can now plot the results
+# We can now plot the results
 plot(results$year, results$wgt)
+
+#You can now go to the git button at the top and "commit" the changes
 
